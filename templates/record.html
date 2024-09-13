@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Record Audio</title>
+    <script src="/static/ckeditor/ckeditor.js"></script>
+    <link rel="stylesheet" href="/static/style/servicestyle.css" />
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="/static/asset/image/NavBarLogo.png" alt="CatatCepat Logo">
+                <!-- <h1>CatatCepat</h1> -->
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="http://127.0.0.1:5001">Home</a></li>
+                    <li><a href="http://127.0.0.1:5001/#services">Services</a></li>
+                    <li><a href="http://127.0.0.1:5001/#about">About</a></li>
+                </ul>
+            </nav>
+            <div class="login-btn">
+                <a href="{{ dashboard_url }}">{{ user['username'] }}</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1>Record Audio</h1>
+        <p>Real-time text transcript as you speak</p>
+
+        <!-- Lang Option -->
+        <div class="options">
+            <div class="language">
+                <p>Bahasa</p>
+                <select name="input-language" id="language"></select>
+            </div>
+        </div>
+        <div class="line"></div>
+
+        <!-- Recording Button -->
+        <button class="btn record">
+            <div class="icon">
+                <!-- <p></p> -->
+                <ion-icon name="mic-outline"><p></p></ion-icon>
+                <img src="/static/asset/bars.svg" alt="" />
+                <!-- <p></p> -->
+            </div>
+        </button>
+
+        <!-- Text Editor -->
+        <div class="result" spellcheck="false" placeholder="Text will be shown here">
+            <textarea id="editor" name="interim" class="interim"></textarea>
+            <script>
+                CKEDITOR.replace('editor');
+            </script>
+        </div>
+        <div class="result-buttons">
+            <button class="btn clear">
+                <ion-icon name="trash-outline"><p></p></ion-icon>               
+            </button>
+            <button class="btn download">
+                <ion-icon name="cloud-download-outline"><p></p></ion-icon>  
+            </button>
+        </div>
+    </div>
+
+    <!-- IONICONS and other scripts -->
+    <!-- <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="/static/script/languages.js"></script>
+    <script src="/static/script/script.js"></script> -->
+
+    <!-- Script for Clear and Download buttons -->
+    <!-- <script>
+        // Clear button functionality
+        document.querySelector('.btn.clear').addEventListener('click', function() {
+            CKEDITOR.instances['editor'].setData(''); // Clear the editor content
+        });
+
+        // Download button functionality
+        document.querySelector('.btn.download').addEventListener('click', function() {
+            const editorData = CKEDITOR.instances['editor'].getData(); // Get the content from the editor
+            const blob = new Blob([editorData], { type: 'text/plain' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'speech.pdf';
+            link.click();
+        });
+    </script> -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <img src="/static/asset/image/NavBarLogo.png" alt="CatatCepat Logo" class="footer-logo">
+                <p>Get the latest news and updates</p>
+                <p>Subscribe our newsletters to follow the news about our fresh products.</p>
+                <div class="subscribe">
+                    <input type="email" placeholder="Enter your email address">
+                    <button>Subscribe</button>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="link-column">
+                    <h4>Get started</h4>
+                    <a href="http://127.0.0.1:5001">Home</a>
+                    <a href="http://127.0.0.1:5001/#services">Service</a>
+                    <a href="#">Sign up</a>
+                </div>
+                <div class="link-column">
+                    <h4>Legal</h4>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+                <div class="link-column">
+                    <h4>Support</h4>
+                    <a href="#">FAQ</a>
+                    <a href="#">Contact us</a>
+                    <a href="#">Customer support</a>
+                </div>
+            </div>
+            <!-- <div class="footer-social">
+                <h4>Follow us</h4>
+                <div class="social-icons">
+                    <a href="#"><img src="email-icon.png" alt="Email"></a>
+                    <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+                    <a href="#"><img src="whatsapp-icon.png" alt="WhatsApp"></a>
+                    <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+                    <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                </div>
+            </div> -->
+            <div class="footer-map">
+                <h4>Our Office</h4>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.107971500526!2d110.41373558342455!3d-6.996564041461353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708b6769041ae9%3A0xc903b0320fc8986d!2sPolda%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1724121138993!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="footer-map"></iframe>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright © 2024 <a href="#">CatatCepat</a> | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <!-- IONICONS and other scripts -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="/static/script/languages.js"></script>
+    <script src="/static/script/script.js"></script>
+
+    <!-- Script for Clear and Download buttons -->
+    <script>
+        document.querySelector('.btn.clear').addEventListener('click', function() {
+            CKEDITOR.instances['editor'].setData(''); // Clear the editor content
+        });
+
+        document.querySelector('.btn.download').addEventListener('click', function() {
+            const editorData = CKEDITOR.instances['editor'].getData(); // Ambil konten dari editor
+            
+            // Membuat elemen HTML untuk menghilangkan tag HTML
+            const tempElement = document.createElement('div');
+            tempElement.innerHTML = editorData;
+            const plainText = tempElement.innerText || tempElement.textContent; // Mengambil teks murni
+
+            // Menggunakan jsPDF untuk membuat PDF
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            // Menentukan lebar halaman PDF
+            const pageWidth = doc.internal.pageSize.getWidth();
+            const margin = 10;
+            const textWidth = pageWidth - margin * 2;
+
+            // Membungkus teks panjang ke dalam baris
+            const lines = doc.splitTextToSize(plainText, textWidth);
+
+            // Menambahkan teks yang telah dibungkus ke dalam PDF
+            doc.text(lines, margin, margin);
+
+            // Menyimpan file PDF
+            doc.save('speech.pdf');
+        });
+
+        function saveTranscription(text) {
+            const data = {
+                filename: `recording_${Date.now()}.txt`, // Generate a unique filename
+                text: text
+            };
+
+            fetch('/save_transcription', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+            .then(response => response.json())
+            .then(result => {
+                console.log('Transcription saved:', result);
+            })
+            .catch(error => {
+                console.error('Error saving transcription:', error);
+            });
+        }
+
+    </script>
+</body>
+</html>

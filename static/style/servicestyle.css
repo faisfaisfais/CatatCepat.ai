@@ -1,0 +1,369 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+
+:root {
+  --primary-color: #394EEA;
+  --bg-color: #fff;
+  --text-color: #000;
+  --light-text-color: #a5a5a5;
+  --body-bg-color: #f5f5f5;
+  --footer-bg-color: #f8f9fa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--body-bg-color);
+  color: var(--text-color);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  padding: 20px;
+  background-color: whitesmoke;
+  color: white;
+}
+
+.header-container .logo {
+  display: flex;
+  align-items: center;
+}
+
+.header-container .logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.header-container nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header-container nav ul li a {
+  color: #352CAB;
+  text-decoration: none;
+}
+
+.header-container .login-btn a {
+  background-color: #352CAB;
+  color: whitesmoke;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-left: 20px; /* Add space between nav links and the logout button */
+}
+
+.main-content {
+  text-align: center;
+  padding: 40px 20px;
+  flex: 1;
+}
+
+.main-content h1 {
+  font-size: 36px;
+  color: var(--text-color);
+}
+
+.main-content p {
+  font-size: 18px;
+  color: var(--light-text-color);
+  margin-bottom: 40px;
+}
+
+/* lang option */
+.options select {
+    width: 10%;
+    padding: 10px;
+    border: 1px solid var(--light-text-color);
+    border-radius: 5px;
+    outline: none;
+    margin-bottom: 20px;
+  }
+.options div:not(:last-child) select {
+    margin-bottom: 20px;
+  }
+  
+.options p {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: var(--light-text-color);
+  }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 25px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.line {
+    position: relative;
+    width: 100%;
+    height: 1px;
+    background-color: var(--light-text-color);
+    opacity: 0.5;
+    margin: 30px 0;
+  }
+  
+/* .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    height: 60px;
+    padding: 20px;
+    width: 10%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #fff;
+    background-color: #394EEA;
+  } */
+
+.btn.record {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+/* Tambahkan style ini di file style.css */
+
+.input-container {
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.custom-file-upload {
+    display: block;
+    width: 100%;
+    padding: 12px 24px;
+    cursor: pointer;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.custom-file-upload:hover {
+    background-color: white;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+#fileInput {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+}
+
+.file-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 16px;
+}
+
+/* Loading spinner style */
+.spinner {
+    display: none;
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #09f;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 20px auto;
+  }
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+
+.icon {
+  position: relative;
+}
+
+.icon img {
+  width: 30px;
+  height: 30px;
+  display: none;
+}
+
+.record.recording .icon img {
+  display: block;
+}
+
+.record.recording .icon ion-icon {
+  display: none;
+}
+
+.result {
+  margin: 20px auto;
+  max-width: 800px;
+  border: 1px dashed var(--light-text-color);
+  padding: 20px;
+}
+
+.result textarea {
+  width: 100%;
+  height: 300px;
+}
+
+
+.footer {
+    background-color: #f5f7fc;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .footer-left {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-logo {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+  
+  .subscribe {
+    display: flex;
+    margin-top: 20px;
+  }
+  
+  .subscribe input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    flex: 1;
+  }
+  
+  .subscribe button {
+    padding: 10px 20px;
+    background-color: #6c63ff;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+  }
+  
+  .footer-links {
+    display: flex;
+    flex: 2;
+    min-width: 350px;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .link-column {
+    flex: 10;
+    margin: 0 20px;
+  }
+  
+  .link-column h4 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .link-column a {
+    display: block;
+    margin-bottom: 10px;
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .footer-social {
+    flex: 1;
+    min-width: 150px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-social h4 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .social-icons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .social-icons a img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .footer-map {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 20px;
+  }
+  
+  .footer-map iframe {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  .footer-bottom {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+    font-size: 14px;
+    color: #888;
+  }
+  
+  .footer-bottom a {
+    color: #6c63ff;
+    text-decoration: none;
+  }

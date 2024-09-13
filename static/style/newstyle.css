@@ -1,0 +1,281 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f9fa;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  padding: 20px;
+  background-color: whitesmoke;
+  color: white;
+}
+
+.header-container .logo {
+  display: flex;
+  align-items: center;
+}
+
+.header-container .logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.header-container nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header-container nav ul li a {
+  color: #352CAB;
+  text-decoration: none;
+}
+
+.header-container .login-btn a {
+  background-color: #352CAB;
+  color: whitesmoke;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-left: 20px; /* Add space between nav links and the logout button */
+}
+
+/* Hero Section */
+.hero-section {
+  background-color: #e9ecef;
+  padding: 100px 0;
+}
+
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-text {
+  max-width: 50%;
+}
+
+.hero-text h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.hero-text .btn {
+  background-color: #352CAB;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.hero-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* About Section */
+.about-section {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.about-section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Services Section */
+.services-section {
+  padding: 60px 20px;
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+.services-section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.service-cards {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.card {
+  background-color: white;
+  padding: 20px;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card img {
+  height: 100px;;
+  margin-top: 20px;
+}
+
+.card h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 16px;
+}
+
+
+.footer {
+  background-color: #f5f7fc;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-left {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 20px;
+}
+
+.footer-logo {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.subscribe {
+  display: flex;
+  margin-top: 20px;
+}
+
+.subscribe input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px 0 0 5px;
+  flex: 1;
+}
+
+.subscribe button {
+  padding: 10px 20px;
+  background-color: #352CAB;
+  color: white;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+
+.footer-links {
+  display: flex;
+  flex: 2;
+  min-width: 350px;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.link-column {
+  flex: 10;
+  margin: 0 20px;
+}
+
+.link-column h4 {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #333;
+}
+
+.link-column a {
+  display: block;
+  margin-bottom: 10px;
+  color: #666;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-social {
+  flex: 1;
+  min-width: 150px;
+  margin-bottom: 20px;
+}
+
+.footer-social h4 {
+  margin-bottom: 15px;
+  font-size: 16px;
+  color: #333;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons a img {
+  width: 30px;
+  height: 30px;
+}
+
+.footer-map {
+  flex: 1;
+  min-width: 200px;
+  margin-bottom: 20px;
+}
+
+.footer-map iframe {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid #ddd;
+  font-size: 14px;
+  color: #888;
+}
+
+.footer-bottom a {
+  color: #352CAB;
+  text-decoration: none;
+}

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CatatCepat - Speech to Text</title>
+    <link rel="stylesheet" href="/static/style/newstyle.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="/static/asset/image/NavBarLogo.png" alt="CatatCepat Logo">
+                <!-- <h1>CatatCepat</h1> -->
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+            <div class="login-btn">
+                <a href="{{ dashboard_url }}">{{ user['username'] }}</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h2>Speech to Text</h2>
+                <p>Just speak and let us do the rest</p>
+                <a href="#" class="btn">Get Started</a>
+            </div>
+            <div class="hero-image">
+                <img src="/static/asset/image/LandingPageImg.png" alt="Speech to Text">
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <h2>About Us</h2>
+            <p>Get to know CatatCepat better</p>
+            <p>CatatCepat is an innovative app that designed to facilitate the process of recording and managing information quick and efficient. This app is equipped with advanced features that allow users to record audio, upload audio files, and convert them into text in real-time. Additionally, CatatCepat provides organized storage and note management, as well as a text search feature that makes it easy for users to find the information they need quickly.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="services-container">
+            <h2>Services</h2>
+            <p>Choose our tools according to your needs!</p>
+            <div class="service-cards">
+                <div class="card">
+                    <a href="/record">
+                    <button>
+                    <img src="/static/asset/image/record.png" alt="Record Audio">
+                    <h3>Record Audio</h3>
+                    <p>Transcript your text in real time as you speak</p>
+                    </button>
+                    </a>
+                </div>
+                <div class="card">
+                    <a href="/upload">
+                    <button>
+                    <img src="/static/asset/image/download.png" alt="Upload Audio File">
+                    <h3>Upload Audio File</h3>
+                    <p>Transcribe the text of the audio file that you uploaded</p>
+                    </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="footer-logo.png" alt="CatatCepat Logo">
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#">Get Started</a></li>
+                    <li><a href="#">Legal</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <a href="#"><img src="facebook.png" alt="Facebook"></a>
+                <a href="#"><img src="twitter.png" alt="Twitter"></a>
+                <a href="#"><img src="instagram.png" alt="Instagram"></a>
+            </div>
+            <div class="footer-address">
+                <p>1234 Main St, Suite 500</p>
+                <p>City, State 12345</p>
+            </div>
+        </div>
+    </footer> -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <img src="/static/asset/image/NavBarLogo.png" alt="CatatCepat Logo" class="footer-logo">
+                <p>Get the latest news and updates</p>
+                <p>Subscribe our newsletters to follow the news about our fresh products.</p>
+                <div class="subscribe">
+                    <input type="email" placeholder="Enter your email address">
+                    <button>Subscribe</button>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="link-column">
+                    <h4>Get started</h4>
+                    <a href="http://127.0.0.1:5001">Home</a>
+                    <a href="http://127.0.0.1:5001/#services">Service</a>
+                    <a href="#">Sign up</a>
+                </div>
+                <div class="link-column">
+                    <h4>Legal</h4>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+                <div class="link-column">
+                    <h4>Support</h4>
+                    <a href="#">FAQ</a>
+                    <a href="#">Contact us</a>
+                    <a href="#">Customer support</a>
+                </div>
+            </div>
+            <!-- <div class="footer-social">
+                <h4>Follow us</h4>
+                <div class="social-icons">
+                    <a href="#"><img src="email-icon.png" alt="Email"></a>
+                    <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+                    <a href="#"><img src="whatsapp-icon.png" alt="WhatsApp"></a>
+                    <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+                    <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                </div>
+            </div> -->
+            <div class="footer-map">
+                <h4>Our Office</h4>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.107971500526!2d110.41373558342455!3d-6.996564041461353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708b6769041ae9%3A0xc903b0320fc8986d!2sPolda%20Jawa%20Tengah!5e0!3m2!1sid!2sid!4v1724121138993!5m2!1sid!2sid" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="footer-map"></iframe>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Copyright © 2024 <a href="#">CatatCepat</a> | All Rights Reserved</p>
+        </div>
+    </footer>
+</body>
+</html>
